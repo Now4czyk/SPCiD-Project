@@ -7,7 +7,7 @@ close all;
 
 %% 4.2 Podstawowy UAR z regulatorem PID
 
-%% Odkomentuj te dane i zakomentuj reszte skryptu do odpalenia schematu scheme1_1
+%% Odkomentuj te dane do odpalenia schematu scheme1_1
 % k = 6;
 % T_1 = 5.9;
 % T_2 = 0.8;
@@ -36,9 +36,9 @@ u = zeros(1, N);
 y(1) = 0;
 y(2) = 0;
 %z rysunku 2: e(n) = w(n) - y(n-1)dlatego
+e(0) = 1;
 e(1) = 1;
-e(2) = 1;
-sumaUchybow = e(1) + e(2);
+sumaUchybow = e(0) + e(1)
 for i=3:N
     %TODO tu coś tam info o bardziej punktowanym podejściu 
     %obliczenie uchybu i dotychczasowej sumy uchybow
@@ -49,10 +49,7 @@ for i=3:N
     y(i) = (2-1.42*Tp)*y(i-1) + (-0.21*Tp^2+1.42*Tp-1)*y(i-2) + 1.27* Tp^2*u(i-2);
 end
 figure;
-% plot(1:N, w);
-% hold on;
-plot(1:N, y);
-% no niby wszystko git ale jednak ten wykres to tak nie do końca
+step()
 
 
 
