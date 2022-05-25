@@ -76,7 +76,9 @@ close all;
 %         najwyzsza=y(i);
 %     end
 % end
-% disp(najwyzsza)     
+% disp(najwyzsza); 
+% disp("faktycznie nie musiałem pisać tej super ekstra kox pętli");
+% max(y)
 %% dla kryterium symetrii
 
 %współczynniki transmitancji
@@ -147,4 +149,6 @@ for i=1:4500
         najwyzsza=y(i);
     end
 end
-disp(najwyzsza)
+disp(najwyzsza);
+disp("faktycznie nie musiałem pisać tej super ekstra kox pętli");
+max(y)
