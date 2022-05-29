@@ -1,5 +1,4 @@
-%% Link do sprawozdania
-% https://docs.google.com/document/d/1rqwLZ-c1CUDAs6HAGjWjasRgMZJ9j3YUT7sq61bgrIs/edit
+%% Zadanie 1
 % Indeks: 147698
 clc;
 clear all;
@@ -34,7 +33,7 @@ step(G_s);
 hold on;
 %dwie pierwsze próbki zerowe, ponieważ inaczej nie jesteśmy w stanie
 %obliczyć y(3), a u to wektor 1, ponieważ wymuszenie jest skokowe
-N= length(t)
+N= length(t);
 u = ones(1, N);
 y = zeros(1, N);
 y(1) = 0;
