@@ -19,31 +19,22 @@ w = sin(2*t);
 y = zeros(1, N);
 e = zeros(1, N);
 u = zeros(1, N);
-ISE = zeros(1, N);
-IAE = zeros(1, N);
 y(1) = 0;
 y(2) = 0;
 e(1) = 1;
 e(2) = 1;
 sumaUchybow = e(1) + e(2);
-ISE(1) = Tp*1;
-ISE(2) = Tp*1;
-IAE(1) = Tp*2;
-IAE(2) = Tp*2;
 for i=3:N
     %obliczenie uchybu i dotychczasowej sumy uchybow
     e(i) = w(i) - y(i-1);
     sumaUchybow = sumaUchybow + e(i);
     %równanie (6)
     u(i) = kp*((e(i) + Tp/Ti*sumaUchybow + Td/Tp*(e(i)-e(i-1))));
-    %4.4 sprzężenie wyprzedzające 
+    %4.4 sprzężenie wyprzedzające - sygnał sterujący
     uf = 4.72/6*(-4)*w(i)+6.7/6*2*cos(2*t(i))+1/6*w(i);
     u(i) = uf + u(i);
     %wyznaczone równanie rekursywne
     y(i) = (2-1.42*Tp)*y(i-1) + (-0.21*Tp^2+1.42*Tp-1)*y(i-2) + 1.27* Tp^2*u(i-2);
-    %wskaźniki jakości
-    ISE(i) = ISE(i-1) + Tp*e(i)^2;
-    IAE(i) = IAE(i-1) + Tp*abs(e(i));
 end
 figure;
 subplot(2, 1, 1);
@@ -54,9 +45,3 @@ legend( 'sygnał zadany', 'odpowiedź układu');
 subplot(2, 1, 2);
 plot(t, u);
 legend('sygnał sterujący');
-
-figure;
-plot(t, ISE);
-hold on;
-plot(t, IAE);
-legend( 'ISE', 'IAE')
