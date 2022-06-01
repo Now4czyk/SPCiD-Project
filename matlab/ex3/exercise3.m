@@ -17,6 +17,7 @@ kp = 0.615;
 Ti = 5.9;
 Td = 0.1;
 Tp = 0.01;
+
 N = 4500;
 %inicjalizacja wektorów niezbędnych do obliczenia sterowania, wyjścia oraz
 %wskaźników jakości dyskretnego UAR
