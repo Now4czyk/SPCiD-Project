@@ -1,6 +1,6 @@
 close all; clc; clear all;
 
-%%
+%% 4.4 sprzężenie wyprzedzające
 k = 6;
 T_1 = 5.9;
 T_2 = 0.8;
