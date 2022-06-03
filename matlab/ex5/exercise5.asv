@@ -34,9 +34,11 @@ for i=3:N
     %równanie (6)
     u(i) = kp*((e(i) + Tp/Ti*sumaUchybow + Td/Tp*(e(i)-e(i-1))));
     %4.5 ograniczenie i AWC1
-    if abs(e(i)) > 0.2
-        e(i) = 
-    
+%     if abs(u(i)) > 0.2
+%         u(i) = u(i) - kp*Tp/Ti*sum(e);
+%     end
+    % tutaj funkcja do AWC niestety nie ogarniam jej i nie działa,
+    % ograniczenie działa dobrze
     if u(i) < min
         u(i) = min;
     elseif u(i) > max
@@ -54,3 +56,5 @@ legend( 'sygnał zadany', 'odpowiedź układu');
 subplot(2, 1, 2);
 plot(t, u);
 legend('sygnał sterujący');
+figure;
+fplot(t, y, [-5 5]);

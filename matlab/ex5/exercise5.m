@@ -25,8 +25,8 @@ e(1) = 1;
 e(2) = 1;
 sumaUchybow = e(1) + e(2);
 %ustawianie ograniczeń
-max = 1;
-min = -1;
+max = 2;
+min = -2;
 for i=3:N
     %obliczenie uchybu i dotychczasowej sumy uchybow
     e(i) = w(i) - y(i-1);
@@ -56,3 +56,5 @@ legend( 'sygnał zadany', 'odpowiedź układu');
 subplot(2, 1, 2);
 plot(t, u);
 legend('sygnał sterujący');
+figure;
+fplot(t, y, [-5 5]);
