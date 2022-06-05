@@ -1,5 +1,3 @@
-%% Link do sprawozdania
-% https://docs.google.com/document/d/1rqwLZ-c1CUDAs6HAGjWjasRgMZJ9j3YUT7sq61bgrIs/edit
 % Indeks: 147698
 clc;
 clear all;
@@ -27,8 +25,6 @@ e = zeros(1, N);
 u = zeros(1, N);
 ISE = zeros(1, N);
 IAE = zeros(1, N);
-y(1) = 0;
-y(2) = 0;
 e(1) = 1;
 e(2) = 1;
 sumaUchybow = e(1) + e(2);
@@ -86,8 +82,6 @@ e = zeros(1, N);
 u = zeros(1, N);
 ISE = zeros(1, N);
 IAE = zeros(1, N);
-y(1) = 0;
-y(2) = 0;
 e(1) = 1;
 e(2) = 1;
 sumaUchybow = e(1) + e(2);
