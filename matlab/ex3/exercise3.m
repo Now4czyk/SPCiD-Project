@@ -115,6 +115,7 @@ plot(t, ISE);
 hold on;
 plot(t, IAE);
 legend( 'ISE', 'IAE')
-
+disp(ISE(4500));
+disp(IAE(4500));
 %% maksymalne odchylenie dynamiczne 
 max(y)
