@@ -1,5 +1,3 @@
 # SPCiD Project
-File name templates:
-- exercises: exercise 1 `exercise1`
-- schemes: exercise 1 scheme 1 `scheme1_1`
-- folders: exercise 1 `ex1`
+Project created for studies purposes.
+Implementation of discrete control system. Including discrete PID regulator, Feedforward and AWC.
